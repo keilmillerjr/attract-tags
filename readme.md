@@ -89,7 +89,7 @@ display	Arcade
 
 ## Bugs
 
-There is currently a bug in attractmode where filtering by button count does not work due to a change in mame.xml format. It may or may not work for you. Hopefully the issue is resolved soon. See the open [issue](https://github.com/mickelson/attract/issues/420).
+There is currently a bug in attractmode where filtering by button count does not work due to a change in mame.xml format. It may or may not work for you. I resolved the [issue](https://github.com/mickelson/attract/issues/420) and sent a pull request.
 
 ## Credit
 
