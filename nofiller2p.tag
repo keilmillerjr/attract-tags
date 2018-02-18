@@ -489,7 +489,6 @@ shollow
 sidearms
 silentd
 silkroad
-simpbowl
 simpsons2p3
 skykid
 slammast
