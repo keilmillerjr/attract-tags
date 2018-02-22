@@ -602,7 +602,6 @@ winspike
 wiz
 wizdfire
 wjammers
-wmsnarc
 wndrplnt
 wof
 wow
