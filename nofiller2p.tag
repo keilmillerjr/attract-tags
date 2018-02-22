@@ -584,7 +584,6 @@ vigilant
 viostorm
 viprp1
 vsav
-vspsx
 wakuwak7
 wardner
 warriorb
