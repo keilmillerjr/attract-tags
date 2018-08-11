@@ -16,11 +16,13 @@ Tag files should be placed in the following path:
 
 * attract/romlists/romlist/
 
-## Usage Examples
+## Usage
 
 partials from ```attract.cfg```
 
 ### neogeo
+
+neogeo tag list includes full library of games except some unlicensed commercial releases not yet emulated in MAME. Example below will filter out Majong/Quiz games such as Quiz King of Fighters. Omit the Category rule if you wish to include these types of games.
 
 ```squirrel
 display	Neo Geo
@@ -30,9 +32,7 @@ display	Neo Geo
 	in_menu              yes
 	global_filter        
 		rule                 Tags contains neogeo
-		rule                 Category not_contains Majong
-		rule                 Category not_contains Quiz
-		rule                 Category not_contains Tabletop
+		rule                 Category not_contains Majong|Quiz|Tabletop
 	filter               All
 	filter               Driving
 		rule                 Category contains Driving
@@ -54,18 +54,53 @@ display	Neo Geo
 		sort_by              Year
 ```
 
-### nofiller 2-player horizontal 4-button
+### nofiller
 
-```
+nofiller includes the best games mame has to offer. It is split into two lists as some four player games offer a board dedicated specifically for two player cabinets, such as Sunset Riders. Use nofiller2p list for one and two player cabinets, and nofiller4p list for four player cabinets. You can change the button count or rotation appropriately to match your cabinet.
+
+```squirrel
 display	Arcade
-	layout               mvscomplete
+	layout               flavors
 	romlist              arcade
 	in_cycle             yes
 	in_menu              yes
 	global_filter        
 		rule                 Tags contains nofiller2p
 		rule                 Rotation equals 0|180
-		rule                 Buttons equals 1|2|3|4
+		rule                 Buttons equals 1|2|3|4|5|6
+	filter               All
+	filter               Driving
+		rule                 Category contains Driving
+	filter               Fighter
+		rule                 Category contains Fighter
+	filter               Favorites
+		rule                 Favourite equals 1
+	filter               Maze
+		rule                 Category contains Maze
+	filter               Platform
+		rule                 Category contains Platform
+	filter               Puzzle
+		rule                 Category contains Puzzle
+	filter               Shooter
+		rule                 Category contains Shooter
+	filter               Sports
+		rule                 Category contains Sports
+	filter               Year
+		sort_by              Year
+```
+
+### vsnes
+
+vsnes omits light gun and DualSystem games.
+
+```squirrel
+display	Nintendo VS UniSystem
+	layout               playchoicecomplete
+	romlist              vsnes
+	in_cycle             yes
+	in_menu              yes
+	global_filter        
+		rule                 Tags contains vsnes
 	filter               All
 	filter               Driving
 		rule                 Category contains Driving
@@ -89,7 +124,7 @@ display	Arcade
 
 ## Bugs
 
-There is currently a bug in attractmode where filtering by button count does not work due to a change in mame.xml format. It may or may not work for you. I resolved the [issue](https://github.com/mickelson/attract/issues/420) and sent a pull request.
+There is currently a bug in attractmode where filtering by button count does not work due to a change in mame.xml format. It may or may not work for you. I resolved the [issue](https://github.com/mickelson/attract/issues/420) and sent a pull request. *Edit: Pull request has been accepted and made it into AttractMode version 2.4*
 
 ## Credit
 
