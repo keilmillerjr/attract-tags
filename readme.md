@@ -4,7 +4,7 @@ by Keil Miller Jr [Keil Miller Jr](http://keilmiller.com)
 
 ## DESCRIPTION:
 
-*attract tags* is tag files for the [AttractMode](http://attractmode.org) front end. It was designed because I was seeking an easy way to include my entire romset and extras while only showing certain games. The tag system is a great way to acomplish this, and even easier with some prebuilt tags!
+*attract tags* is tag files for the [AttractMode](http://attractmode.org) front end. It was designed because I was seeking an easy way to include my entire romset and extras while only showing certain games. The tag system is a great way to acomplish this, and even easier with some prebuilt tags! Tags follow the [MAME](http://mamedev.org) rom naming scheme.
 
 ## Requirements:
 
@@ -56,7 +56,7 @@ display	Neo Geo
 
 ### nofiller
 
-nofiller includes the best games mame has to offer. It is split into two lists as some four player games offer a board dedicated specifically for two player cabinets, such as Sunset Riders. Use nofiller2p list for one and two player cabinets, and nofiller4p list for four player cabinets. You can change the button count or rotation appropriately to match your cabinet.
+nofiller includes the best arcade games MAME has to offer. It is split into two lists as some four player games offer a board dedicated specifically for two player cabinets, such as Sunset Riders. Use nofiller2p list for one and two player cabinets, and nofiller4p list for four player cabinets. You can change the button count or rotation appropriately to match your cabinet.
 
 ```squirrel
 display	Arcade
