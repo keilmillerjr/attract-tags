@@ -20,6 +20,44 @@ Tag files should be placed in the following path:
 
 partials from ```attract.cfg```
 
+### chd
+
+**version:** 0.203
+
+chd tag list includes all arcade roms that use chd's. Consoles that use chd's, use all chd's and do not need the seperation.
+
+```squirrel
+display	Arcade
+	layout               flavors
+	romlist              arcade
+	in_cycle             yes
+	in_menu              yes
+	global_filter        
+		rule                 Tags not_contains chd
+		rule                 Category not_contains Majong|Quiz|Tabletop
+		rule                 Rotation equals 0|180
+		rule                 Buttons equals 1|2|3|4|5|6
+	filter               All
+	filter               Driving
+		rule                 Category contains Driving
+	filter               Fighter
+		rule                 Category contains Fighter
+	filter               Favorites
+		rule                 Favourite equals 1
+	filter               Maze
+		rule                 Category contains Maze
+	filter               Platform
+		rule                 Category contains Platform
+	filter               Puzzle
+		rule                 Category contains Puzzle
+	filter               Shooter
+		rule                 Category contains Shooter
+	filter               Sports
+		rule                 Category contains Sports
+	filter               Year
+		sort_by              Year
+```
+
 ### neogeo
 
 neogeo tag list includes full library of games except some unlicensed commercial releases not yet emulated in MAME. Example below will filter out Majong/Quiz games such as Quiz King of Fighters. Omit the Category rule if you wish to include these types of games.
