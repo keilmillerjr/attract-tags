@@ -285,7 +285,6 @@ liquidk
 locomotn
 lresort
 lwings
-macea
 machbrkr
 macross
 macross2
@@ -592,7 +591,6 @@ watrball
 wb3
 wbmlvc
 wboy
-wg3dh
 whp
 willow
 winspike
